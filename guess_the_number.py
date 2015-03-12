@@ -60,20 +60,25 @@ def input_guess(guess):
         if guess > secret_number:
             print "Lower"
             print "You have", count, "guesses remaining"
-            
+            #print
         elif guess < secret_number:
             print "Higher"
             print "You have", count, "guesses remaining"
-            
+            #print
         else:
             print "Correct!  You Win!"
             print
             new_game()
     else:
-        print "You have", count, "guesses remaining"
-        print "You ran out of guesses, the number was", secret_number
-        print
-        new_game()
+        if guess == secret_number:
+            print "Correct!  You Win!"
+            print
+            new_game()
+        else:
+            print "You have", count, "guesses remaining"
+            print "You ran out of guesses, the number was", secret_number
+            print
+            new_game()
         
     print
         
@@ -92,3 +97,4 @@ new_game()
 
 
 # always remember to check your completed program against the grading rubric
+
